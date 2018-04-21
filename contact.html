@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Made with Thimble</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="social.html">Social</a></li>
+        <li><a href="mgp.html">Models</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h2>My Contact Information</h2>
+    </header>
+    <form action="//formspree.io/joel.b.dobb@gmail.com" method="POST">
+      <input type="text" name="name">
+      <input type="email" name="_replyto">
+      <input type="submit" value="Send">
+    </form>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = { lat: 52.25, lng: -0.89 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtfIInOoonxI1IapengxVDNYGFtNbQrBg&callback=initMap">
+    </script>
+    <footer>
+      <footer class="footer">© Joel Dobb</footer>
+    </footer>
+  </body>
+</html>
