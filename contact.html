@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Made with Thimble</title>
+    <title>Joel Dobb</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -18,32 +18,35 @@
       </ul>
     </nav>
     <header>
-      <h2>My Contact Information</h2>
+      <h2>Contact Me</h2>
+      <div class="row">
+      <p>Enter your name and email address below to receive a response from me.</p>
+      </div>
     </header>
     <form action="//formspree.io/joel.b.dobb@gmail.com" method="POST">
-      <input type="text" name="name">
-      <input type="email" name="_replyto">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name">
+      <label for="address">Address</label>
+      <input type="email" name="_replyto" id="address">
       <input type="submit" value="Send">
-    </form>
+    </form><!--https://formspree.io/-->
     <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = { lat: 52.25, lng: -0.89 };
+        var myLocation = { lat: 52.25, lng: -0.89 };
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: uluru
+          center: myLocation
         });
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: myLocation,
           map: map
-        });
+        }); 
       }
     </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtfIInOoonxI1IapengxVDNYGFtNbQrBg&callback=initMap">
-    </script>
-    <footer>
-      <footer class="footer">© Joel Dobb</footer>
-    </footer>
+    </script><!-- https://developers.google.com/maps/documentation/javascript/adding-a-google-map -->
+      <footer class="footer">© Joel Dobb 2018</footer>
   </body>
 </html>
